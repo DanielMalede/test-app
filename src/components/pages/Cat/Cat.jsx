@@ -8,4 +8,5 @@ function Cat() {
     </div>
   );
 }
+
 export default Cat;
