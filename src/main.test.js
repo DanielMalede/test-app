@@ -1,13 +1,29 @@
-import { getMyName } from "./main";
+import { getHelloDaniel ,getHelloWithFirstName } from "./main";
 
-it("return my name is daniel", () => {
-  expect(getMyName()).toBe("my name is daniel");
+describe("test for getHelloDaniel", () => {
+  it("return hello daniel", () => {
+    expect(getHelloDaniel()).toBe("hello daniel");
+  });
+
+  it("not return hi there", () => {
+    expect(getHelloDaniel()).not.toBe("hi there");
+  });
+
+  it("not return a number", () => {
+    expect(getHelloDaniel()).not.toBeNaN();
+  });
 });
 
-it("not return hi there", () => {
-  expect(getMyName()).not.toBe("my name is");
-});
+describe("test for getHelloWithFirstName",()=>{
+    it("return hello daniel",()=>{
+        expect(getHelloWithFirstName("daniel")).toBe(`hello daniel`)
+    })
 
-it("not return a number", () => {
-  expect(getMyName()).not.toBeNaN();
-});
+    it("should return hello",()=>{
+        expect(getHelloWithFirstName()).toBe("hello undefined" )
+    })
+    
+    it("should return number",()=>{
+        expect(getHelloWithFirstName(27527)).not.toBe("hello daniel")
+    })
+})

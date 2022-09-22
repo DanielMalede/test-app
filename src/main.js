@@ -1,3 +1,7 @@
-export function getMyName(myName) {
-    return "my name is"`${myName}`
+export const getHelloDaniel = ()=> {
+    return "hello daniel"
+}
+
+export const getHelloWithFirstName = (firstName)=>{
+    return `hello ${firstName}`
 }
