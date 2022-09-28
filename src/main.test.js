@@ -1,10 +1,6 @@
-import {
-  getHelloDaniel,
-  getHelloWithFirstName,
-  getSumOfNum1AndNum2,
-  getNum1DevidedByNum2,
-} from "./main";
-
+import {getHelloDaniel,getHelloWithFirstName,getSumOfNum1AndNum2,getNum1DevidedByNum2,} from "./main";
+import Children from "./components/pages/children"
+import {react, render, screen} from "@testing-library/react"
 describe("test for getHelloDaniel", () => {
   it("return hello daniel", () => {
     expect(getHelloDaniel()).toBe("hello daniel");
@@ -52,5 +48,7 @@ describe("test for getNum1DevidedByNum2",()=>{
         expect(getNum1DevidedByNum2("dan","mal")).toBeNaN
     })
 })
+
+
 
 
